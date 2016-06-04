@@ -14,9 +14,7 @@ app.directive('inventoryList', function() {
   return {
     restrict: "E",
     // replace: true,
-    scope: {
-      itemInDirective: '<itemAttribute'
-    },
+    scope: {},
     controllerAs: "list",
     controller: InventoryListController,
     templateUrl: '../partials/inventoryView.html'

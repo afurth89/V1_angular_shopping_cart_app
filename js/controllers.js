@@ -23,11 +23,16 @@ function CategoryFilterController(ShoppingCartService) {
   // Calculate price 
 app.controller("InventoryListController", InventoryListController);
 
-InventoryListController.$inject = ["ShoppingCartService", "yesNoFilter", "categoryFilter"]
+InventoryListController.$inject = ["ShoppingCartService", "yesNoFilter"]
 
 function InventoryListController(ShoppingCartService) {
   this.inventory = ShoppingCartService.getInventory();
-  console.log(this.inventory)
+  this.category = ShoppingCartService.getCategory();
+  this.byCategory = function(category) {
+    return function(item) {
+      return item.categories.includes(category);
+    }
+  }
 }
 
 // Item Controller

@@ -10,10 +10,13 @@
     <tr ng-repeat="itemFromRepeat in list.inventory" item-attribute="itemFromRepeat">
       <td><img src="{{itemFromRepeat.imageUrl}}" alt="{{itemFromRepeat.name}}"></td>
       <td>
-        <p>Name: {{itemFromRepeat.name}}</p>
-        <p>price: {{itemFromRepeat.price}}</p>
-        <p>rating: {{itemFromRepeat.rating}}</p>
-        <p>inStock: {{itemFromRepeat.inStock}}</p>
+        <h3 class="itemTitle">{{itemFromRepeat.name}}</h3>
+        <p><span class="itemTitle">Price:</span> {{itemFromRepeat.price / 100 | currency}}</p>
+        <p><span class="itemTitle">Caffeine Scale:</span> {{itemFromRepeat.caffeineScale}}</p>
+        <p><span class="itemTitle">Ingredients:</span> {{itemFromRepeat.ingredients}}</p>
+        <p><span class="itemTitle">Rating:</span> {{itemFromRepeat.rating}}</p>
+        <p><span class="itemTitle">In Stock:</span> {{itemFromRepeat.inStock | yesNo}}</p>
+        <p><span class="itemTitle">Categories:</span> {{itemFromRepeat.categories}}</p>
       </td>
     </tr>
   </tbody>

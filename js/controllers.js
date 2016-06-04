@@ -10,7 +10,7 @@
   // Calculate price 
 app.controller("InventoryListController", InventoryListController);
 
-InventoryListController.$inject = ["ShoppingCartService"]
+InventoryListController.$inject = ["ShoppingCartService", "yesNoFilter"]
 
 function InventoryListController(ShoppingCartService) {
   this.inventory = ShoppingCartService.getInventory();

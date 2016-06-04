@@ -12,14 +12,28 @@ app.directive('inventoryFiltering', function() {
 });
 
 // Inventory Display
-app.directive('inventoryDisplay', function() {
+app.directive('inventoryView', function() {
   return {
     restrict: "E",
+    // replace: true,
     scope: {},
-    controllerAs: "displayCtrl",
+    controllerAs: "invViewCtrl",
     controller: function() {
 
     },
-    templateUrl: '../partials/inventoryDisplay.html'
+    templateUrl: '../partials/inventoryView.html'
   }
 });
+
+// Item Display
+app.directive('itemView', function() {
+  return {
+    restrict: "AE",
+    scope: {},
+    controllerAs: "itemViewCtrl",
+    controller: function() {
+
+    },
+    templateUrl: '../partials/itemView.html'
+  }
+})

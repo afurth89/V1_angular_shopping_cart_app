@@ -15,8 +15,13 @@
         <p><span class="itemTitle">Caffeine Scale:</span> {{itemFromRepeat.caffeineScale}}</p>
         <p><span class="itemTitle">Ingredients:</span> {{itemFromRepeat.ingredients}}</p>
         <p><span class="itemTitle">Rating:</span> {{itemFromRepeat.rating}}</p>
-        <p><span class="itemTitle">In Stock:</span> {{itemFromRepeat.inStock | yesNo}}</p>
-        <p><span class="itemTitle">Categories:</span> {{itemFromRepeat.categories}}</p>
+        <p><span class="itemTitle">In Stock:</span> {{itemFromRepeat.inStock | yesNo}}</p> 
+        <p>
+          <span class="itemTitle">Categories:</span> 
+          <ul>
+            <li ng-repeat="category in itemFromRepeat.categories">{{category}}</li>
+          </ul>
+        </p>
       </td>
     </tr>
   </tbody>

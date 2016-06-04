@@ -3,7 +3,7 @@ app.directive('inventoryFiltering', function() {
   return {
     restrict: "E",
     scope: {},
-    controllerAs: "categoryFilter",
+    controllerAs: "catFilt",
     controller: CategoryFilterController,
     templateUrl: '../partials/inventoryFiltering.html'
   }
@@ -23,15 +23,15 @@ app.directive('inventoryList', function() {
   }
 });
 
-// Item Display
-app.directive('itemView', function() {
-  return {
-    restrict: "AE",
-    scope: {},
-    controllerAs: "itemViewCtrl",
-    controller: function() {
+// // Item Display
+// app.directive('itemView', function() {
+//   return {
+//     restrict: "AE",
+//     scope: {},
+//     controllerAs: "itemViewCtrl",
+//     controller: function() {
 
-    },
-    templateUrl: '../partials/itemView.html'
-  }
-})
+//     },
+//     templateUrl: '../partials/itemView.html'
+//   }
+// })

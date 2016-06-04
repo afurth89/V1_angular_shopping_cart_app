@@ -5,8 +5,13 @@ app.controller("CategoryFilterController", CategoryFilterController);
 CategoryFilterController.$inject = ["ShoppingCartService"];
 
 function CategoryFilterController(ShoppingCartService) {
+  // Gets category on page load
   this.category = ShoppingCartService.getCategory();
-  console.log(this.category)
+  // Updates the category
+  this.changeCategory = function(category) {
+    console.log("The new category is", category)
+    this.category = ShoppingCartService.changeCategory(category);
+  }
 }
   // By Name - text match
   // Might be two separate controllers 
@@ -18,7 +23,7 @@ function CategoryFilterController(ShoppingCartService) {
   // Calculate price 
 app.controller("InventoryListController", InventoryListController);
 
-InventoryListController.$inject = ["ShoppingCartService", "yesNoFilter"]
+InventoryListController.$inject = ["ShoppingCartService", "yesNoFilter", "categoryFilter"]
 
 function InventoryListController(ShoppingCartService) {
   this.inventory = ShoppingCartService.getInventory();

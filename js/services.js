@@ -114,7 +114,7 @@ app.service("ShoppingCartService", function() {
         "__v": 0,
         "categories": ["spring", "warm","winter"]
     }]
-  var category = "all"
+  var category = "all categories";
 
   return {
     getInventory: function() {
@@ -122,11 +122,11 @@ app.service("ShoppingCartService", function() {
     },
     getCategory: function() {
       return category;
-    }    
-    // changeCategory: function(category) {
-    //   category = category;
-    //   return category;
-    // }
+    },    
+    changeCategory: function(category) {
+      category = category;
+      return category;
+    }
  
   }
 

@@ -1,21 +1,22 @@
 <!-- Inventory filtering -->
-<p>The current category is: {{categoryFilter.category}}</p>
+<p>The current category is: {{catFilt.category}}</p>
 
 <p>Search by Category</p>
 <div class="btn-group">
   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Choose a category <span class="caret"></span>
+    {{catFilt.category}} <span class="caret"></span>
   </button>
   <ul class="dropdown-menu">
-    <li><a href="#">awesome</a></li>
-    <li><a href="#">cold</a></li>
-    <li><a href="#">dark</a></li>
-    <li><a href="#">dry</a></li>
-    <li><a href="#">hot</a></li>
-    <li><a href="#">lucid</a></li>
-    <li><a href="#">spring</a></li>
-    <li><a href="#">summer</a></li>
-    <li><a href="#">warm</a></li>
-    <li><a href="#">winter</a></li>
+    <li><a ng-click="catFilt.changeCategory('all categories')">all categories</a></li>
+    <li><a ng-click="catFilt.changeCategory('awesome')">awesome</a></li>
+    <li><a ng-click="catFilt.changeCategory('cold')">cold</a></li>
+    <li><a ng-click="catFilt.changeCategory('dark')">dark</a></li>
+    <li><a ng-click="catFilt.changeCategory('dry')">dry</a></li>
+    <li><a ng-click="catFilt.changeCategory('hot')">hot</a></li>
+    <li><a ng-click="catFilt.changeCategory('lucid')">lucid</a></li>
+    <li><a ng-click="catFilt.changeCategory('spring')">spring</a></li>
+    <li><a ng-click="catFilt.changeCategory('summer')">summer</a></li>
+    <li><a ng-click="catFilt.changeCategory('warm')">warm</a></li>
+    <li><a ng-click="catFilt.changeCategory('winter')">winter</a></li>
   </ul>
 </div>

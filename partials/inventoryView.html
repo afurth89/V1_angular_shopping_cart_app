@@ -7,7 +7,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="itemFromRepeat in list.inventory" item-attribute="itemFromRepeat">
+    <tr ng-repeat="itemFromRepeat in list.inventory | categoryFilter" item-attribute="itemFromRepeat">
       <td><img src="{{itemFromRepeat.imageUrl}}" alt="{{itemFromRepeat.name}}"></td>
       <td>
         <h3 class="itemTitle">{{itemFromRepeat.name}}</h3>

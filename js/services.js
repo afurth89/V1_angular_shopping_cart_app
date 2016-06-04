@@ -115,5 +115,11 @@ app.service("ShoppingCartService", function() {
         "categories": ["spring", "warm","winter"]
     }]
 
+  return {
+    getInventory: function() {
+      return inventory;
+    }
+  }
+
   
 })

@@ -12,15 +12,15 @@ app.directive('inventoryFiltering', function() {
 });
 
 // Inventory Display
-app.directive('inventoryView', function() {
+app.directive('inventoryList', function() {
   return {
     restrict: "E",
     // replace: true,
-    scope: {},
-    controllerAs: "invViewCtrl",
-    controller: function() {
-
+    scope: {
+      itemInDirective: '<itemAttribute'
     },
+    controllerAs: "list",
+    controller: InventoryListController,
     templateUrl: '../partials/inventoryView.html'
   }
 });

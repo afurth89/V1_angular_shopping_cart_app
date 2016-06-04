@@ -8,6 +8,14 @@
   // Controls the displaying of items
   // Sort by price
   // Calculate price 
+app.controller("InventoryListController", InventoryListController);
+
+InventoryListController.$inject = ["ShoppingCartService"]
+
+function InventoryListController(ShoppingCartService) {
+  this.inventory = ShoppingCartService.getInventory();
+  console.log(this.inventory)
+}
 
 // Item Controller
   // Lives inside elements getting repeated

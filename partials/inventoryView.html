@@ -7,6 +7,14 @@
     </tr>
   </thead>
   <tbody>
-    <tr item-view></tr>
+    <tr ng-repeat="itemFromRepeat in list.inventory" item-attribute="itemFromRepeat">
+      <td><img src="{{itemFromRepeat.imageUrl}}" alt="{{itemFromRepeat.name}}"></td>
+      <td>
+        <p>Name: {{itemFromRepeat.name}}</p>
+        <p>price: {{itemFromRepeat.price}}</p>
+        <p>rating: {{itemFromRepeat.rating}}</p>
+        <p>inStock: {{itemFromRepeat.inStock}}</p>
+      </td>
+    </tr>
   </tbody>
 </table>

@@ -3,10 +3,8 @@ app.directive('inventoryFiltering', function() {
   return {
     restrict: "E",
     scope: {},
-    controllerAs: "filterCtrl",
-    controller: function() {
-
-    },
+    controllerAs: "categoryFilter",
+    controller: CategoryFilterController,
     templateUrl: '../partials/inventoryFiltering.html'
   }
 });

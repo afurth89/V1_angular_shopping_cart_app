@@ -56,3 +56,15 @@ app.directive("cartList", function() {
   }
 })
 
+app.directive("updateCart", function() {
+  return {
+    restrict: "E",
+    scope: {
+      itemAttr: "=itemFromDirective"
+    },
+    controllerAs: "update",
+    controller: UpdateCartController,
+    templateUrl: "../partials/updateCart.html"
+  }
+})
+

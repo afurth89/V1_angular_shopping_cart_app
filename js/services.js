@@ -144,9 +144,11 @@ app.service("ShoppingCartService", function() {
       return searchText;
     },
     updateQuantity: function(item) {
+      console.log(item)
       let foundItemIndex = inventory.findIndex(function(i) {
-        return i.id === item.id;
+        return i.name === item.name;
       })
+      console.log(foundItemIndex)
       inventory[foundItemIndex].quantity = item.quantity;
       console.log("The inventory count for ", inventory[foundItemIndex].name, " is ", inventory[foundItemIndex].quantity)
       return inventory;

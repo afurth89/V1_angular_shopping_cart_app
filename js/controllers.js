@@ -58,11 +58,13 @@ AddToCartController.$inject = ["ShoppingCartService"]
 function AddToCartController(ShoppingCartService) {
   // Create an addToCart function
   this.addToCart = function() {
+    console.log("The item being updated is: ", this.itemFromDirective)
     console.log("The updated quantity is: ", this.itemFromDirective.quantity)
     ShoppingCartService.updateQuantity(this.itemFromDirective) 
   }
 }
 
+// Cart Display Controller
 app.controller("CartListController", CartListController)
 
 CartListController.$inject = ["ShoppingCartService"]
@@ -70,4 +72,16 @@ CartListController.$inject = ["ShoppingCartService"]
 function CartListController(ShoppingCartService) {
   this.cart = ShoppingCartService.getCart();
   console.log(this.cart)
+}
+
+app.controller("UpdateCartController", UpdateCartController)
+
+UpdateCartController.$inject = ["ShoppingCartService"]
+
+function UpdateCartController(ShoppingCartService) {
+  this.updateCart = function() {
+    console.log("The item being updated is: ", this.itemFromDirective)
+    console.log("The updated quantity is: ", this.itemFromDirective.quantity)
+    ShoppingCartService.updateQuantity(this.itemFromDirective) 
+  }
 }

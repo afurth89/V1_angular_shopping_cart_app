@@ -24,7 +24,8 @@ app.service("ShoppingCartService", function() {
         "rating": 2,
         "imageUrl": "http://s7d5.scene7.com/is/image/Teavana/32303_d?$cimg$",
         "__v": 0,
-        "categories": ["awesome"]
+        "categories": ["awesome"],
+        "quantity": 0
     },    {
         "_id": "55c8ee82152165d244b98302",
         "name": "Flexner white tea",
@@ -35,7 +36,8 @@ app.service("ShoppingCartService", function() {
         "rating": 4,
         "imageUrl": "http://s7d5.scene7.com/is/image/Teavana/31358_d?$cimg$",
         "__v": 0,
-        "categories": ["cold"]
+        "categories": ["cold"],
+        "quantity": 0
     },    {
         "_id": "55c8ee82152165d244b98303",
         "name": "Pressor leaf",
@@ -46,7 +48,8 @@ app.service("ShoppingCartService", function() {
         "rating": 1,
         "imageUrl": "http://s7d5.scene7.com/is/image/Teavana/31358_d?$cimg$",
         "__v": 0,
-        "categories": ["dry", "hot", "awesome"]
+        "categories": ["dry", "hot", "awesome"],
+        "quantity": 0
     },    {
         "_id": "55c8ee82152165d244b98304",
         "name": "Flexner veggie tea",
@@ -57,7 +60,8 @@ app.service("ShoppingCartService", function() {
         "rating": 1,
         "imageUrl": "http://s7d5.scene7.com/is/image/Teavana/32621_d?$cimg$",
         "__v": 0,
-        "categories": ["summer"]
+        "categories": ["summer"],
+        "quantity": 0
     },    {
         "_id": "55c8ee82152165d244b98305",
         "name": "Topflighter malt",
@@ -68,7 +72,8 @@ app.service("ShoppingCartService", function() {
         "rating": 3,
         "imageUrl": "http://s7d5.scene7.com/is/image/Teavana/31359_d?$cimg$",
         "__v": 0,
-        "categories": ["dry","lucid","warm"]
+        "categories": ["dry","lucid","warm"],
+        "quantity": 0
     },    {
         "_id": "55c8ee82152165d244b98306",
         "name": "Cooking mix",
@@ -79,7 +84,8 @@ app.service("ShoppingCartService", function() {
         "rating": 3,
         "imageUrl": "http://s7d5.scene7.com/is/image/Teavana/32303_d?$cimg$",
         "__v": 0,
-        "categories": ["summer"]
+        "categories": ["summer"],
+        "quantity": 0
     },    {
         "_id": "55c8ee82152165d244b98307",
         "name": "Cooking stew",
@@ -90,7 +96,8 @@ app.service("ShoppingCartService", function() {
         "rating": 2,
         "imageUrl": "http://s7d5.scene7.com/is/image/Teavana/31358_d?$cimg$",
         "__v": 0,
-        "categories": ["dry","winter","lucid"]
+        "categories": ["dry","winter","lucid"],
+        "quantity": 0
     },    {
         "_id": "55c8ee82152165d244b98308",
         "name": "Prevenient herb tea",
@@ -101,7 +108,8 @@ app.service("ShoppingCartService", function() {
         "rating": 3,
         "imageUrl": "http://s7d5.scene7.com/is/image/Teavana/32174_d?$cimg$",
         "__v": 0,
-        "categories": ["lucid","hot"]
+        "categories": ["lucid","hot"],
+        "quantity": 0
     },    {
         "_id": "55c8ee82152165d244b98309",
         "name": "Angular mix",
@@ -112,7 +120,8 @@ app.service("ShoppingCartService", function() {
         "rating": 2,
         "imageUrl": "http://s7d5.scene7.com/is/image/Teavana/32621_d?$cimg$",
         "__v": 0,
-        "categories": ["spring", "warm","winter"]
+        "categories": ["spring", "warm","winter"],
+        "quantity": 0
     }]
   var category = "all categories";
   var searchText = "";

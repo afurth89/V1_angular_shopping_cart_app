@@ -50,6 +50,18 @@ function InventoryListController(ShoppingCartService) {
   }
 }
 
-// Item Controller
+// AddToCart Controller
+app.controller("AddToCartController", AddToCartController)
+
+AddToCartController.$inject = ["ShoppingCartService"]
+
+function AddToCartController(ShoppingCartService) {
+  // Create an addToCart function
+  this.addToCart = function() {
+    console.log("The updated quantity is: ", this.itemFromDirective.quantity)
+    ShoppingCartService.updateQuantity(this.itemFromDirective) 
+  }
+}
+
   // Lives inside elements getting repeated
   // Changes the quantity in cart

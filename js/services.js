@@ -142,6 +142,14 @@ app.service("ShoppingCartService", function() {
       searchText = text;
       console.log("The services searchText is: ",searchText)
       return searchText;
+    },
+    updateQuantity: function(item) {
+      let foundItemIndex = inventory.findIndex(function(i) {
+        return i.id === item.id;
+      })
+      inventory[foundItemIndex].quantity = item.quantity;
+      console.log("The inventory count for ", inventory[foundItemIndex].name, " is ", inventory[foundItemIndex].quantity)
+      return inventory;
     }
  
   }

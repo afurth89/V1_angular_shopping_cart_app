@@ -32,6 +32,19 @@ app.directive('inventoryList', function() {
   }
 });
 
+app.directive('addToCart', function() {
+  return {
+    restrict: "E",
+    scope: {},
+    bindToController: {
+      itemAttr: "=itemFromDirective"
+    },
+    controllerAs: "add",
+    controller: AddToCartController,
+    templateUrl: "../partials/addToCart.html"
+  }
+})
+
 // // Item Display
 // app.directive('itemView', function() {
 //   return {

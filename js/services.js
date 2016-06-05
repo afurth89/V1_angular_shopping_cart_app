@@ -25,7 +25,7 @@ app.service("ShoppingCartService", function() {
         "imageUrl": "http://s7d5.scene7.com/is/image/Teavana/32303_d?$cimg$",
         "__v": 0,
         "categories": ["awesome"],
-        "quantity": 0
+        "quantity": 2
     },    {
         "_id": "55c8ee82152165d244b98302",
         "name": "Flexner white tea",
@@ -37,7 +37,7 @@ app.service("ShoppingCartService", function() {
         "imageUrl": "http://s7d5.scene7.com/is/image/Teavana/31358_d?$cimg$",
         "__v": 0,
         "categories": ["cold"],
-        "quantity": 0
+        "quantity": 1
     },    {
         "_id": "55c8ee82152165d244b98303",
         "name": "Pressor leaf",
@@ -150,6 +150,16 @@ app.service("ShoppingCartService", function() {
       inventory[foundItemIndex].quantity = item.quantity;
       console.log("The inventory count for ", inventory[foundItemIndex].name, " is ", inventory[foundItemIndex].quantity)
       return inventory;
+    },
+    getCart: function() {
+      let cart = inventory.reduce(function(cur, next) {
+        if (next.quantity > 0) {
+          cur.push(next);
+        }
+        return cur;
+      }, [])
+      console.log(cart)
+      return cart;
     }
  
   }

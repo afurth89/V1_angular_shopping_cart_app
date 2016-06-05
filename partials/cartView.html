@@ -1,0 +1,33 @@
+<!-- Cart Display -->
+<table class="table">
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Quantity</th>
+      <th>Subtotal</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="itemFromRepeat in cart.cart"> 
+    <!-- | filter:list.byCategory()" -->
+    
+      <td>
+        <h3 class="itemTitle">{{itemFromRepeat.name}}</h3>
+        <img src="{{itemFromRepeat.imageUrl}}" alt="{{itemFromRepeat.name}}">
+        <p><span class="itemTitle">Caffeine Scale:</span> {{itemFromRepeat.caffeineScale}}</p>
+        <p><span class="itemTitle">Ingredients:</span> {{itemFromRepeat.ingredients}}</p>
+        <p><span class="itemTitle">Rating:</span> {{itemFromRepeat.rating}}</p>
+      </td>
+      <td>
+        <p>{{itemFromRepeat.quantity}}</p>
+      </td>
+      <td>
+        <p class="itemTitle">{{itemFromRepeat.quantity * itemFromRepeat.price / 100 | currency}}</p>
+      </td>
+      <td>
+        <p>Buttons to Update Cart</p>
+      </td>
+    </tr>
+  </tbody>
+</table>

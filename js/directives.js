@@ -32,6 +32,7 @@ app.directive('inventoryList', function() {
   }
 });
 
+// To Add an Item to the Cart
 app.directive('addToCart', function() {
   return {
     restrict: "E",
@@ -42,6 +43,16 @@ app.directive('addToCart', function() {
     controllerAs: "add",
     controller: AddToCartController,
     templateUrl: "../partials/addToCart.html"
+  }
+})
+
+app.directive("cartList", function() {
+  return {
+    restrict: "E",
+    scope: {},
+    controllerAs: "cart",
+    controller: CartListController,
+    templateUrl: "../partials/cartView.html"
   }
 })
 

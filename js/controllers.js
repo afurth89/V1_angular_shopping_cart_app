@@ -63,5 +63,11 @@ function AddToCartController(ShoppingCartService) {
   }
 }
 
-  // Lives inside elements getting repeated
-  // Changes the quantity in cart
+app.controller("CartListController", CartListController)
+
+CartListController.$inject = ["ShoppingCartService"]
+
+function CartListController(ShoppingCartService) {
+  this.cart = ShoppingCartService.getCart();
+  console.log(this.cart)
+}

@@ -122,6 +122,7 @@ app.service("ShoppingCartService", function() {
       return inventory;
     },
     getCategory: function() {
+      console.log("getCategory func has triggered")
       return category;
     },    
     changeCategory: function(category) {

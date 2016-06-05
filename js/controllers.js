@@ -39,12 +39,13 @@ InventoryListController.$inject = ["ShoppingCartService", "yesNoFilter"]
 function InventoryListController(ShoppingCartService) {
   this.inventory = ShoppingCartService.getInventory();
   this.category = ShoppingCartService.getCategory();
-  this.byCategory = function(category) {
+  this.byCategory = function() {
+    console.log("The inventory list's category is: ", this.category)
     return function(item) {
-      if (category === "all categories") {
+      if (this.category === "all categories") {
         return item;
       }
-      return item.categories.includes(category);
+      return item.categories.includes(this.category);
     }
   }
 }

@@ -13,8 +13,19 @@ function CategoryFilterController(ShoppingCartService) {
     this.category = ShoppingCartService.changeCategory(category);
   }
 }
+
   // By Name - text match
-  // Might be two separate controllers 
+app.controller("SearchFilterController", SearchFilterController)
+
+SearchFilterController.$inject = ["ShoppingCartService"]
+
+function SearchFilterController(ShoppingCartService) {
+  // Search function to compare text against inventory
+  this.updateSearchText = function() {
+    console.log("The controller's search text is: ", this.text)
+    ShoppingCartService.changeSearchText(this.text)
+  }
+}
 
 
 // List Display Controllers
@@ -30,6 +41,9 @@ function InventoryListController(ShoppingCartService) {
   this.category = ShoppingCartService.getCategory();
   this.byCategory = function(category) {
     return function(item) {
+      if (category === "all categories") {
+        return item;
+      }
       return item.categories.includes(category);
     }
   }

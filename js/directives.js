@@ -1,11 +1,22 @@
-// Inventory Filtering
-app.directive('inventoryFiltering', function() {
+// Inventory Filtering - by Category
+app.directive('categoryFiltering', function() {
   return {
     restrict: "E",
     scope: {},
     controllerAs: "catFilt",
     controller: CategoryFilterController,
-    templateUrl: '../partials/inventoryFiltering.html'
+    templateUrl: '../partials/categoryFiltering.html'
+  }
+});
+
+// Inventory Filtering - by Category
+app.directive('searchFiltering', function() {
+  return {
+    restrict: 'E',
+    scope: {},
+    controllerAs: 'searchFilt',
+    controller: SearchFilterController,
+    templateUrl: '../partials/searchFiltering.html'
   }
 });
 

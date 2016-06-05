@@ -115,6 +115,7 @@ app.service("ShoppingCartService", function() {
         "categories": ["spring", "warm","winter"]
     }]
   var category = "all categories";
+  var searchText = "";
 
   return {
     getInventory: function() {
@@ -126,6 +127,11 @@ app.service("ShoppingCartService", function() {
     changeCategory: function(category) {
       category = category;
       return category;
+    },
+    changeSearchText: function(text) {
+      searchText = text;
+      console.log("The services searchText is: ",searchText)
+      return searchText;
     }
  
   }

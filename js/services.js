@@ -13,7 +13,8 @@ app.service("ShoppingCartService", function() {
         "rating": 1,
         "imageUrl": "http://s7d5.scene7.com/is/image/Teavana/32664_d?$cimg$",
         "__v": 0,
-        "categories": [ "dark", "cold"]
+        "categories": [ "dark", "cold"],
+        "quantity": 0
     },    {
         "_id": "55c8ee82152165d244b98301",
         "name": "Incompactness syrup",
@@ -25,7 +26,7 @@ app.service("ShoppingCartService", function() {
         "imageUrl": "http://s7d5.scene7.com/is/image/Teavana/32303_d?$cimg$",
         "__v": 0,
         "categories": ["awesome"],
-        "quantity": 2
+        "quantity": 0
     },    {
         "_id": "55c8ee82152165d244b98302",
         "name": "Flexner white tea",
@@ -37,7 +38,7 @@ app.service("ShoppingCartService", function() {
         "imageUrl": "http://s7d5.scene7.com/is/image/Teavana/31358_d?$cimg$",
         "__v": 0,
         "categories": ["cold"],
-        "quantity": 1
+        "quantity": 0
     },    {
         "_id": "55c8ee82152165d244b98303",
         "name": "Pressor leaf",
@@ -151,6 +152,7 @@ app.service("ShoppingCartService", function() {
       console.log(foundItemIndex)
       inventory[foundItemIndex].quantity = item.quantity;
       console.log("The inventory count for ", inventory[foundItemIndex].name, " is ", inventory[foundItemIndex].quantity)
+      debugger;
       return inventory;
     },
     getCart: function() {

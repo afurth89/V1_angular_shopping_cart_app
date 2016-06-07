@@ -38,7 +38,8 @@ app.directive('addToCart', function() {
     restrict: "E",
     scope: {},
     bindToController: {
-      itemAttr: "=itemFromDirective"
+      // itemAttr: "=itemFromDirective"
+      itemFromDirective: "=itemAttr"
     },
     controllerAs: "add",
     controller: AddToCartController,

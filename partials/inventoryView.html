@@ -8,8 +8,8 @@
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="itemFromRepeat in list.inventory"> 
-    <!-- | filter:list.byCategory()" -->
+    <tr ng-repeat="itemFromRepeat in list.inventory | filter:list.byCategory()"> 
+    
     
       <td><img src="{{itemFromRepeat.imageUrl}}" alt="{{itemFromRepeat.name}}"></td>
       <td>
